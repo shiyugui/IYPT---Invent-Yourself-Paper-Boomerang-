@@ -112,7 +112,7 @@ def main():
         trajectory_y.append(position[1])
         times.append(t + time_step)
         t += time_step
-        if position[1] <= 0.0 and abs(position[0]) < 1.0:
+        if position[1] <= 0.0 and position[0] < 1.0:
             break
     # 绘制轨迹图
     plt.figure()

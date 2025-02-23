@@ -52,10 +52,11 @@ pip install numpy matplotlib
  - 请输入纸飞镖的质量 (单位: kg) : 0.01
  - 请输入纸飞镖的参考面积 (单位: m²) : 0.02
  - 请输入纸飞镖的初速度 (单位: m/s) : 10
- - 请输入纸飞镖的投掷角度 (单位: 度) : 45
+ - 请输入纸飞镖的投掷角度 (单位: 度) : 30
 
 ### 输出：
- - Flight time: 1.42 seconds
- - Maximum height: 1.27 meters
- - Maximum flight distance: 10.00 meters
- ![模拟飞行轨迹](https://github.com/user-attachments/assets/eeef8789-a0b3-41b6-9f33-083314ec4039)
+ - Flight time: 1.28 seconds
+ - Maximum height: 2.66 meters
+ - Maximum flight distance: 0.86 meters
+ ![模拟轨迹](https://github.com/user-attachments/assets/6889a71d-c0b4-4a83-9e88-565dc37c2cb5)
+

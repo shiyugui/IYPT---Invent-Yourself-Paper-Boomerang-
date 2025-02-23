@@ -52,11 +52,9 @@ def initialize_parameters():
     """
     mass = get_input("请输入纸飞镖的质量 (单位: kg) :")
     area = get_input("请输入纸飞镖的参考面积 (单位: m^2) :")
-    lift_coefficient = get_input("请输入纸飞镖的升力系数 :")
-    drag_coefficient = get_input("请输入纸飞镖的阻力系数 :")
     initial_velocity = get_input("请输入纸飞镖的初速度 (单位: m/s) :")
     angle_degrees = get_input("请输入纸飞镖的投掷角度 (单位: 度) :")
-    return mass, area, lift_coefficient, drag_coefficient, initial_velocity, angle_degrees
+    return mass, area, initial_velocity, angle_degrees
 
 def update(position, velocity, mass, area, lift_coefficient, drag_coefficient, time_step, density_air, G):
     """
@@ -94,9 +92,11 @@ def main():
     主函数，执行纸飞镖的模拟。
     """
     # 初始化参数
-    mass, area, lift_coefficient, drag_coefficient, initial_velocity, angle_degrees = initialize_parameters()
+    mass, area, initial_velocity, angle_degrees = initialize_parameters()
     G = 9.81  # 重力加速度
     density_air = 1.225  # 空气密度
+    lift_coefficient = 0.5 #升力系数
+    drag_coefficient = 0.1 #阻力系数
     angle_radians = np.radians(angle_degrees)  # 将角度转换为弧度
     time_step = 0.01  # 时间步长
     total_time = 10.0  # 总模拟时间
